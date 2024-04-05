@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons Example</title>
+  <style>
+    /* Styling for the spline-viewer to fill the entire page */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0; /* Background color for demonstration */
+    }
+    #splineViewer {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 0; /* Lower z-index to ensure it's behind the invisible panel */
+    }
+    
+    /* Styling for the buttons */
+    .site-nav-button {
+      background-color: transparent;
+      border: 2px solid transparent;
+      color: purple;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: color 0.3s, border-color 0.3s; /* Added transition */
+      border-radius: 6px;
+      margin: 10px;
+      outline: none;
+      z-index: 1; /* Ensure buttons appear above the invisible panel */
+    }
+
+    /* Glow effect for site nav buttons */
+    .site-nav-button:hover {
+      border-color: purple;
+      color: white;
+      box-shadow: 0 0 20px purple; /* Glow effect */
+    }
+
+    /* Styling for the invisible panel */
+    .invisible-panel {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+      z-index: 9999; /* Higher z-index to ensure it's above other elements */
+      border: 2px solid purple;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .download-link {
+      font-size: 20px;
+      color: purple;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    /* LED glowing effect */
+    .download-link::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: purple;
+      border-radius: 50%;
+      top: 50%;
+      left: -20px;
+      transform: translateY(-50%);
+      animation: glow 1s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 10px 0 purple;
+      }
+      100% {
+        box-shadow: 0 0 20px 10px purple;
+      }
+    }
+
+    /* Styling for the additional text */
+    .additional-text {
+      color: purple;
+      font-size: 16px;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.91/build/spline-viewer.js"></script>
+</head>
+<body>
+  <spline-viewer id="splineViewer" url="https://prod.spline.design/xSEWdKLiKq9T2cAo/scene.splinecode"></spline-viewer>
+  <div style="position: absolute; top: 20px; left: 20px;">
+    <button class="site-nav-button" onclick="window.location.href = 'index.html'">Home</button>
+    <button class="site-nav-button" onclick="window.location.href = 'about.html'">About Me</button>
+    <button class="site-nav-button" onclick="window.location.href = 'safety.html'">Safety</button>
+  </div>
+
+  <!-- Invisible panel with download links -->
+  <div class="invisible-panel" id="invisiblePanel">
+    <a href="https://discord.gg/NFV4GCrWn8" class="download-link">Download Link 1</a>
+    <a href="https://discord.gg/NFV4GCrWn8" class="download-link">Download Link 2</a>
+    <a href="https://discord.gg/NFV4GCrWn8" class="download-link">Download Link 3</a>
+    <p class="additional-text">Adding 1 tool every week!</p>
+  </div>
+
+  <script>
+    // Ensure the invisible panel is above the spline-viewer and make it visible
+    document.addEventListener("DOMContentLoaded", function() {
+      var invisiblePanel = document.getElementById("invisiblePanel");
+      var splineViewer = document.getElementById("splineViewer");
+      splineViewer.parentNode.insertBefore(invisiblePanel, splineViewer.nextSibling);
+      invisiblePanel.style.visibility = "visible";
+    });
+  </script>
+</body>
+</html>
