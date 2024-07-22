@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #444;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #4caf50;
+        }
+
+        .user-profile {
+            color: #4caf50;
+        }
+
+        nav {
+            background-color: #2a2a2a;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1; /* This allows main to grow and fill the space between header and footer */
+            margin: 20px;
+        }
+
+        .contact-container {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .contact-container h2 {
+            color: #81c784;
+            margin-bottom: 10px;
+        }
+
+        .contact-container p {
+            margin-bottom: 15px;
+        }
+
+        .contact-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-container label {
+            margin-bottom: 5px;
+            color: #e0e0e0;
+        }
+
+        .contact-container input[type="text"],
+        .contact-container input[type="email"],
+        .contact-container textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #333;
+            color: #e0e0e0;
+        }
+
+        .contact-container input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-container input[type="submit"]:hover {
+            background-color: #81c784;
+        }
+
+        .discord-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #7289da; /* Discord color */
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .discord-button:hover {
+            background-color: #5b6eae;
+        }
+
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #444;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        footer li {
+            margin: 0 15px;
+        }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 0;
+            color: #4caf50;
+        }
+
+        a {
+            color: #4caf50;
+        }
+
+        a:hover {
+            color: #81c784;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <div class="user-profile">
+            Logged in as <strong>Username</strong>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="code.html">Code Snippets</a></li>
+            <li><a href="projects.html">Project Showcases</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="admin.html">About Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="contact-container">
+            <h2>Get in Touch</h2>
+            <p>If you need assistance, please join our Discord server and open a ticket for help. Our team will be happy to assist you there.</p>
+
+            <a href="https://discord.gg/your-discord-invite" class="discord-button" target="_blank">
+                Join Our Discord Server
+            </a>
+
+            <h3>Contact Information</h3>
+            <p>You can also reach us via the following methods:</p>
+            <p><strong>Email:</strong> zasodev@gmail.com</p>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="tos.html">Terms of Service</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <p>&copy; 2024 Code & Project Share. All rights reserved.</p>
+    </footer>
+</body>
+</html>

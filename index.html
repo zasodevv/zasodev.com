@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code & Project Share</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #444;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #4caf50;
+        }
+
+        .user-profile {
+            color: #4caf50;
+        }
+
+        nav {
+            background-color: #2a2a2a;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .search-bar {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #333;
+            color: #e0e0e0;
+        }
+
+        .search-bar input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        main {
+            flex: 1; /* This allows main to grow and fill the space between header and footer */
+            display: flex;
+            margin: 20px;
+        }
+
+        .content {
+            flex: 3;
+            margin-right: 20px;
+        }
+
+        .code-share, .project-share {
+            background-color: #2a2a2a;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .code-share h2, .project-share h2 {
+            margin-top: 0;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #444;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        footer li {
+            margin: 0 15px;
+        }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 0;
+            color: #4caf50;
+        }
+
+        a {
+            color: #4caf50;
+        }
+
+        a:hover {
+            color: #81c784;
+        }
+
+        .code-snippet {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .code-snippet code {
+            display: block;
+            white-space: pre;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>zaso dev</h1>
+        <div class="user-profile">
+            Logged in as <strong>user</strong>
+        </div>
+    </header>
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="code.html">Code Snippets</a></li>
+          <li><a href="projects.html">Project Showcases</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="admin.html">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <input type="submit" value="Search">
+    </div>
+    <main>
+        <section class="content">
+            <div class="code-share">
+                <h2>Latest Code Snippets</h2>
+                <div class="code-snippet">
+                    <pre><code>// Example of a C# code snippet
+public class HelloWorld {
+    public static void Main(string[] args) {
+        Console.WriteLine("Hello, World!");
+    }
+}</code></pre>
+                </div>
+                <div class="code-snippet">
+                    <pre><code># Example of a Python code snippet
+def hello_world():
+    print("Hello, World!")
+hello_world()</code></pre>
+                </div>
+            </div>
+            <div class="project-share">
+                <h2>Featured Projects</h2>
+                <div class="project">
+                    <h3>zaso dev</h3>
+                    <p>in-game fortnite dev</p>
+                </div>
+                <div class="project">
+                  <h3>hexxware</h3>
+                    <p>Roblox cheats</p>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <h2>Recent Posts</h2>
+            <ul>
+
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <ul>
+          <li><a href="privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="tos.html">Terms of Service</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <p>&copy; 2024 Code & Project Share. All rights reserved.</p>
+    </footer>
+</body>
+</html>
